@@ -1,8 +1,10 @@
 import React from 'react';
-import HelloWorld from './components/helloWorld';
+import Alert from './components/alert';
+// import HelloWorld from './components/helloWorld';
 
 function App(): React.JSX.Element {
-  return <HelloWorld />;
+  // return <HelloWorld />;
+  return <Alert />;
 }
 
 export default App;
