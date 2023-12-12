@@ -6,7 +6,8 @@ import React from 'react';
 // import Layout from './components/5-layout';
 // import Dimensions from './components/6-dimensions';
 // import DimensionsWithEventListeners from './components/6-dimensionsEventListener';
-import DimensionsHook from './components/6-dimensionsHook';
+// import DimensionsHook from './components/6-dimensionsHook';
+import SafeAreaViewAPI from './components/7-safeAreaView';
 
 function App(): React.JSX.Element {
   // return <HelloWorld />;
@@ -16,7 +17,8 @@ function App(): React.JSX.Element {
   // return <Layout />;
   // return <Dimensions />;
   // return <DimensionsWithEventListeners />;
-  return <DimensionsHook />;
+  // return <DimensionsHook />;
+  return <SafeAreaViewAPI />
 }
 
 export default App;
