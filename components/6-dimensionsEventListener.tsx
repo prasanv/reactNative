@@ -5,6 +5,7 @@ import {View, Text, StyleSheet, Dimensions} from 'react-native';
 const DimensionsWithEventListeners = () => {
   const [dimensions, setDimensions] = useState({
     window: Dimensions.get('window'),
+    screen: Dimensions.get('screen'),
   });
 
   console.log({dimensions});
@@ -12,15 +13,22 @@ const DimensionsWithEventListeners = () => {
   useEffect(() => {
     const subscription = Dimensions.addEventListener('change', arg => {
       // console.log({arg});
-      setDimensions({window: arg?.window});
+      setDimensions(old => {
+        return {
+          ...old,
+          window: arg.window,
+          screen: arg.screen,
+        };
+      });
     });
     return () => subscription?.remove();
   });
 
-  const {window} = dimensions;
+  const {window, screen} = dimensions;
 
   const newWindowWidth = window.width;
   const newWindowHeight = window.height;
+  const newScreenWidth = screen.width;
 
   return (
     <View style={[styles.container]}>
@@ -32,13 +40,21 @@ const DimensionsWithEventListeners = () => {
             height: newWindowHeight > 800 ? '80%' : '50%',
           },
         ]}>
-        <Text style={styles.text}>Dynamic Screens</Text>
+        <Text
+          style={[
+            styles.text,
+            {
+              fontWeight: newScreenWidth > 390 ? '900' : '400',
+            },
+          ]}>
+          Dynamic Screens
+        </Text>
       </View>
     </View>
   );
 };
 
-const screenWidth = Dimensions.get('screen').width;
+// const screenWidth = Dimensions.get('screen').width;
 // const screenHeight = Dimensions.get('screen').height;
 // console.log({screenWidth, screenHeight});
 
@@ -64,7 +80,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 30,
     color: 'black',
-    fontWeight: screenWidth > 390 ? '900' : '400',
+    // fontWeight: screenWidth > 390 ? '900' : '400',
     textAlign: 'center',
   },
 });
