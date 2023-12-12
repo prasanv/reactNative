@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
   },
   box: {
-    width: windowWidth > 390 ? '90%' : '60%',
+    width: windowWidth < 392 ? '40%' : '85%',
     height: windowHeight > 800 ? '80%' : '50%',
     backgroundColor: 'lightblue',
     justifyContent: 'center',
