@@ -1,4 +1,6 @@
 {
   "name": "reactNative",
-  "displayName": "reactNative"
+  "displayName": "reactNative",
+  "orientation": "default",
+  "userInterfaceStyle": "dark"
 }
