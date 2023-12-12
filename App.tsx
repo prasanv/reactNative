@@ -5,7 +5,8 @@ import React from 'react';
 // import Flex from './components/4-flex';
 // import Layout from './components/5-layout';
 // import Dimensions from './components/6-dimensions';
-import DimensionsWithEventListeners from './components/6-dimensionsEventListener';
+// import DimensionsWithEventListeners from './components/6-dimensionsEventListener';
+import DimensionsHook from './components/6-dimensionsHook';
 
 function App(): React.JSX.Element {
   // return <HelloWorld />;
@@ -14,7 +15,8 @@ function App(): React.JSX.Element {
   // return <Flex />;
   // return <Layout />;
   // return <Dimensions />;
-  return <DimensionsWithEventListeners />;
+  // return <DimensionsWithEventListeners />;
+  return <DimensionsHook />;
 }
 
 export default App;
