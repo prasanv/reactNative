@@ -28,7 +28,7 @@ const DimensionsWithEventListeners = () => {
 
   const newWindowWidth = window.width;
   const newWindowHeight = window.height;
-  const newScreenWidth = screen.width;
+  const newScreenHeight = screen.height;
 
   return (
     <View style={[styles.container]}>
@@ -36,15 +36,15 @@ const DimensionsWithEventListeners = () => {
         style={[
           styles.box,
           {
-            width: newWindowWidth < 392 ? '50%' : '85%',
-            height: newWindowHeight > 800 ? '80%' : '50%',
+            width: newWindowWidth > 750 ? '80%' : '50%',
+            height: newWindowHeight > 390 ? '80%' : '50%',
           },
         ]}>
         <Text
           style={[
             styles.text,
             {
-              fontWeight: newScreenWidth > 390 ? '900' : '400',
+              fontWeight: newScreenHeight > 390 ? '900' : '400',
             },
           ]}>
           Dynamic Screens
