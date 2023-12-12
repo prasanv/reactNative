@@ -7,7 +7,8 @@ import React from 'react';
 // import Dimensions from './components/6-dimensions';
 // import DimensionsWithEventListeners from './components/6-dimensionsEventListener';
 // import DimensionsHook from './components/6-dimensionsHook';
-import SafeAreaViewAPI from './components/7-safeAreaView';
+// import SafeAreaViewAPI from './components/7-safeAreaView';
+import PlatformSpecificCode from './components/8-platformSpecificCode';
 
 function App(): React.JSX.Element {
   // return <HelloWorld />;
@@ -18,7 +19,8 @@ function App(): React.JSX.Element {
   // return <Dimensions />;
   // return <DimensionsWithEventListeners />;
   // return <DimensionsHook />;
-  return <SafeAreaViewAPI />
+  // return <SafeAreaViewAPI />;
+  return <PlatformSpecificCode />;
 }
 
 export default App;
