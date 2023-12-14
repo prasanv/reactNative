@@ -1,34 +1,38 @@
 [
     {
         "name": "Charmander",
-        "image": "require('../assets/charmander.png')",
+        "image": "/assets/charmander.png",
         "type": "Fire",
+        "emoji": "🔥",
         "hp": 39,
         "moves": ["Scratch", "Ember", "Growl", "Leer"],
         "weaknesses": ["Water", "Rock"]
       },
       {
         "name": "Squirtle",
-        "image": "require('../assets/squirtle.png')",
+        "image": "/assets/squirtle.png",
         "type": "Water",
+        "emoji": "💧",
         "hp": 44,
         "moves": ["Tackle", "Water Gun", "Tail Whip", "Withdraw"],
         "weaknesses": ["Electric", "Grass"]
       },
       {
-        "name": "Bulbasaur",
-        "image": "require('../assets/bulbasaur.png')",
-        "type": "Grass",
-        "hp": 45,
-        "moves": ["Tackle", "Vine Whip", "Growl", "Leech Seed"],
-        "weaknesses": ["Fire", "Ice", "Flying", "Psychic"]
-      },
-      {
         "name": "Pikachu",
-        "image": "require('../assets/pikachu.png')",
+        "image": "/assets/pikachu.png",
         "type": "Electric",
+        "emoji": "⚡️",
         "hp": 35,
         "moves": ["Quick Attack", "Thunderbolt", "Tail Whip", "Growl"],
         "weaknesses": ["Ground"]
-      }
+      },
+      {
+        "name": "Bulbasaur",
+        "image": "/assets/bulbasaur.png",
+        "type": "Grass",
+        "emoji": "🌿",
+        "hp": 45,
+        "moves": ["Tackle", "Vine Whip", "Growl", "Leech Seed"],
+        "weaknesses": ["Fire", "Ice", "Flying", "Psychic"]
+      }      
 ]

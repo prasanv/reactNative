@@ -4,8 +4,6 @@ import React from 'react';
 import {FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import pokemanList from '../data/pokemanList.json';
 
-// const pokemanList: ArrayLike<any> | null | undefined = [];
-
 const FlatListView = () => {
   return (
     <SafeAreaView style={[styles.container]}>
@@ -34,6 +32,8 @@ const FlatListView = () => {
               />
             ) : null;
           }}
+          // NOTE: remove the json and add this above to see the EmptyListComponent value
+          // const pokemanList: ArrayLike<any> | null | undefined = [];
           ListEmptyComponent={<Text>Sorry, No Item Found.</Text>}
           ListHeaderComponent={<Text style={styles.header}>Pokemon List</Text>}
           ListFooterComponent={

@@ -40,4 +40,5 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
   },
 });
+
 export default ListScrollView;
