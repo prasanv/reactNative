@@ -2,6 +2,7 @@
 import React from 'react';
 import {
   Image,
+  Platform,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -15,6 +16,16 @@ const pokemanCharacters = () => {
     <SafeAreaView style={[styles.container]}>
       <ScrollView style={[styles.scrollView]}>
         {pokemanChars?.map((item, index) => {
+          const borderColor =
+            item.type.toLowerCase() === 'electric'
+              ? '#FFD700'
+              : item.type.toLowerCase() === 'water'
+              ? '#6493EA'
+              : item.type.toLowerCase() === 'fire'
+              ? '#FF5733'
+              : item.type.toLowerCase() === 'grass'
+              ? '#66CC66'
+              : 'white';
           return (
             <View style={[styles.card]} key={index}>
               <View style={styles.cardHeader}>
@@ -27,7 +38,8 @@ const pokemanCharacters = () => {
                 source={{uri: `http://localhost:8081${item.image}`}}
               />
               <View style={styles.typeContainer}>
-                <View style={styles.typeWrapper}>
+                <View
+                  style={[styles.typeWrapper, {borderColor: `${borderColor}`}]}>
                   <Text style={[styles.text, {fontSize: 23}]}>
                     {item.emoji}
                   </Text>
@@ -55,7 +67,7 @@ const pokemanCharacters = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'lightgrey',
+    backgroundColor: '#F5F5F5',
   },
   scrollView: {
     paddingHorizontal: 15,
@@ -67,6 +79,17 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     paddingVertical: 5,
     paddingLeft: 5,
+    ...Platform.select({
+      ios: {
+        shadowOffset: {width: 2, height: 2},
+        shadowColor: '#333',
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
   },
   cardHeader: {
     flexDirection: 'row',
@@ -101,7 +124,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     borderWidth: 3,
-    borderColor: 'grey',
     borderRadius: 18,
     paddingVertical: 7,
     paddingHorizontal: 9,
