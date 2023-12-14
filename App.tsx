@@ -1,4 +1,5 @@
 import React from 'react';
+import { FlatList } from 'react-native/types';
 // import HelloWorld from './components/1-helloWorld';
 // import Alert from './components/2-alert';
 // import Styling from './components/3-styling';
@@ -12,7 +13,8 @@ import React from 'react';
 // @ts-ignore
 // import PlatformSpecificFile from './components/8-platformSpecificFiles/8-platformSpecificFile';
 // import PokemanChars from './components/9-pokemanChars';
-import ListScrollView from './components/10-listScrollView';
+// import ListScrollView from './components/10-listScrollView';
+import FlatListView from './components/11-flatList';
 
 function App(): React.JSX.Element {
   // return <HelloWorld />;
@@ -27,7 +29,8 @@ function App(): React.JSX.Element {
   // return <PlatformSpecificCode />;
   // return <PlatformSpecificFile />;
   // return <PokemanChars />;
-  return <ListScrollView />;
+  // return <ListScrollView />;
+  return <FlatListView />;
 }
 
 export default App;

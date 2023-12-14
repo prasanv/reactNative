@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
-import pokemanList from '../data.json';
+import pokemanList from '../data/pokemanList.json';
 
 const ListScrollView = () => {
   return (
