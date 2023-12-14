@@ -33,6 +33,10 @@ const pokemanCharacters = () => {
                 <Text style={[styles.headerText]}>{item.name}</Text>
                 <Text style={[styles.text]}>❤️HP: {item.hp}</Text>
               </View>
+              {/* <Image
+                resizeMode="center"
+                source={require('../assets/pikachu.jpg')}
+              /> */}
               <Image
                 style={styles.image}
                 resizeMode="contain"
@@ -108,6 +112,7 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 30,
     fontWeight: '600',
+    color: 'black',
   },
   image: {
     width: '100%',

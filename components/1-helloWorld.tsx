@@ -39,6 +39,7 @@ function HelloWorld(): React.JSX.Element {
         onValueChange={toggleSwitch}
         value={isEnabled}
       />
+      <Image resizeMode="center" source={require('../assets/scenery.jpg')} />
       <Pressable
         onPress={() => {
           console.log('Image is pressed');
