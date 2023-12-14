@@ -26,6 +26,7 @@ const pokemanCharacters = () => {
               : item.type.toLowerCase() === 'grass'
               ? '#66CC66'
               : 'white';
+          const domain = Platform.OS === 'android' ? '10.0.2.2' : 'localhost';
           return (
             <View style={[styles.card]} key={index}>
               <View style={styles.cardHeader}>
@@ -36,7 +37,7 @@ const pokemanCharacters = () => {
                 style={styles.image}
                 resizeMode="contain"
                 source={{
-                  uri: `http://10.0.2.2:8081${item.image}`,
+                  uri: `http://${domain}:8081${item.image}`,
                   headers: {
                     Accept: '*/*',
                   },
