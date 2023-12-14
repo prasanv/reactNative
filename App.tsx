@@ -10,7 +10,9 @@ import React from 'react';
 // import SafeAreaViewAPI from './components/7-safeAreaView';
 // import PlatformSpecificCode from './components/8-platformSpecificCode';
 // @ts-ignore
-import PlatformSpecificFile from './components/8-platformSpecificFiles/8-platformSpecificFile';
+// import PlatformSpecificFile from './components/8-platformSpecificFiles/8-platformSpecificFile';
+// import PokemanChars from './components/9-pokemanChars';
+import ListScrollView from './components/10-listScrollView';
 
 function App(): React.JSX.Element {
   // return <HelloWorld />;
@@ -23,7 +25,9 @@ function App(): React.JSX.Element {
   // return <DimensionsHook />;
   // return <SafeAreaViewAPI />;
   // return <PlatformSpecificCode />;
-  return <PlatformSpecificFile />;
+  // return <PlatformSpecificFile />;
+  // return <PokemanChars />;
+  return <ListScrollView />;
 }
 
 export default App;
