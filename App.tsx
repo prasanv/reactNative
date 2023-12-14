@@ -1,5 +1,4 @@
 import React from 'react';
-import { FlatList } from 'react-native/types';
 // import HelloWorld from './components/1-helloWorld';
 // import Alert from './components/2-alert';
 // import Styling from './components/3-styling';

@@ -29,10 +29,16 @@ const FlatListView = () => {
           ItemSeparatorComponent={item => {
             console.log(item);
             return item.leadingItem.id % 2 === 0 ? (
-              <View style={{borderWidth: 1, marginVertical: 8}} />
+              <View
+                style={{borderWidth: 1, marginVertical: 8, borderColor: 'red'}}
+              />
             ) : null;
           }}
           ListEmptyComponent={<Text>Sorry, No Item Found.</Text>}
+          ListHeaderComponent={<Text style={styles.header}>Pokemon List</Text>}
+          ListFooterComponent={
+            <Text style={styles.header}>End of the List.</Text>
+          }
         />
       </View>
     </SafeAreaView>
@@ -59,8 +65,13 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     paddingLeft: 5,
   },
+  header: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: 'black',
+    margin: 5,
+    textAlign: 'center',
+  },
 });
+
 export default FlatListView;
-function separator(): React.ReactElement<any, any> | null {
-  throw new Error('Function not implemented.');
-}
