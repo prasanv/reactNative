@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {
   Image,
@@ -14,7 +15,6 @@ const pokemanCharacters = () => {
     <SafeAreaView style={[styles.container]}>
       <ScrollView style={[styles.scrollView]}>
         {pokemanChars?.map((item, index) => {
-          console.log(`http://localhost:8081${item.image}`);
           return (
             <View style={[styles.card]} key={index}>
               <View style={styles.cardHeader}>
@@ -28,8 +28,10 @@ const pokemanCharacters = () => {
               />
               <View style={styles.typeContainer}>
                 <View style={styles.typeWrapper}>
-                  <Text style={[styles.text]}>{item.emoji}</Text>
-                  <Text style={[styles.typeText, styles.text]}>
+                  <Text style={[styles.text, {fontSize: 23}]}>
+                    {item.emoji}
+                  </Text>
+                  <Text style={[styles.typeText, styles.text, {fontSize: 20}]}>
                     {item.type}
                   </Text>
                 </View>
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: 200,
-    marginBottom: 16,
+    marginBottom: 9,
   },
   marginWrapper: {
     marginVertical: 18,
@@ -93,17 +95,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   typeWrapper: {
-    marginBottom: 40,
+    marginBottom: 30,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
+    alignItems: 'center',
     borderWidth: 3,
     borderColor: 'grey',
-    borderRadius: 10,
-    padding: 9,
+    borderRadius: 18,
+    paddingVertical: 7,
+    paddingHorizontal: 9,
   },
   typeText: {
-    paddingLeft: 6,
+    paddingLeft: 8,
   },
   text: {
     fontSize: 18,
