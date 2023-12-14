@@ -35,7 +35,12 @@ const pokemanCharacters = () => {
               <Image
                 style={styles.image}
                 resizeMode="contain"
-                source={{uri: `http://localhost:8081${item.image}`}}
+                source={{
+                  uri: `http://10.0.2.2:8081${item.image}`,
+                  headers: {
+                    Accept: '*/*',
+                  },
+                }}
               />
               <View style={styles.typeContainer}>
                 <View
