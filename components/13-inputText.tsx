@@ -1,0 +1,47 @@
+import React, {useState} from 'react';
+import {SafeAreaView, StyleSheet, Text, TextInput, View} from 'react-native';
+
+const InputTextComp = () => {
+  const [textInputValue, setTextInputValue] = useState('');
+
+  const onChangeTextCallback = (e: any) => {
+    setTextInputValue(e);
+    console.log({e, textInputValue});
+  };
+
+  // IMPORTANT NOTE: click `c,d=shift+k` to view and hide the keyboard in the iPhone
+  return (
+    <SafeAreaView style={[styles.container]}>
+      <View style={[styles.field]}>
+        <Text style={[styles.label]}>Enter your Name:</Text>
+        <TextInput
+          style={[styles.input]}
+          value={textInputValue}
+          onChangeText={e => onChangeTextCallback(e)}
+        />
+        <Text>My name is {textInputValue}</Text>
+      </View>
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+    marginHorizontal: 10,
+  },
+  field: {
+    marginVertical: 20,
+  },
+  label: {
+    fontSize: 18,
+  },
+  input: {
+    borderColor: 'grey',
+    borderWidth: 2,
+    height: 40,
+  },
+});
+
+export default InputTextComp;

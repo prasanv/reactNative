@@ -13,8 +13,9 @@ import React from 'react';
 // import PlatformSpecificFile from './components/8-platformSpecificFiles/8-platformSpecificFile';
 // import PokemanChars from './components/9-pokemanChars';
 // import ListScrollView from './components/10-listScrollView';
-import FlatListView from './components/11-flatList';
+// import FlatListView from './components/11-flatList';
 // import SectionListView from './components/12-sectionList';
+import InputTextComp from './components/13-inputText';
 
 function App(): React.JSX.Element {
   // return <HelloWorld />;
@@ -30,8 +31,9 @@ function App(): React.JSX.Element {
   // return <PlatformSpecificFile />;
   // return <PokemanChars />;
   // return <ListScrollView />;
-  return <FlatListView />;
+  // return <FlatListView />;
   // return <SectionListView />;
+  return <InputTextComp />;
 }
 
 export default App;
