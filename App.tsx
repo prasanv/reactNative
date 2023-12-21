@@ -1,5 +1,5 @@
 import React from 'react';
-import HelloWorld from './src/components/1-helloWorld';
+// import HelloWorld from './src/components/1-helloWorld';
 // import Alert from './src/components/2-alert';
 // import Styling from './src/components/3-styling';
 // import Flex from './src/components/4-flex';
@@ -16,9 +16,10 @@ import HelloWorld from './src/components/1-helloWorld';
 // import FlatListView from './src/components/11-flatList';
 // import SectionListView from './src/components/12-sectionList';
 // import InputTextComp from './src/components/13-inputText';
+import SwitchToggle from './src/components/14-switchToggle';
 
 function App(): React.JSX.Element {
-  return <HelloWorld />;
+  // return <HelloWorld />;
   // return <Alert />;
   // return <Styling />;
   // return <Flex />;
@@ -34,6 +35,7 @@ function App(): React.JSX.Element {
   //  return <FlatListView />;
   // return <SectionListView />;
   // return <InputTextComp />;
+  return <SwitchToggle />;
 }
 
 export default App;
