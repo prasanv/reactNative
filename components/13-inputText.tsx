@@ -18,6 +18,13 @@ const InputTextComp = () => {
           style={[styles.input]}
           value={textInputValue}
           onChangeText={e => onChangeTextCallback(e)}
+          placeholder="Krishna Vasudev"
+          placeholderTextColor="#999"
+          // NOTE: Change the boolean value to see the change in the app
+          secureTextEntry={false}
+          keyboardType="default"
+          autoCapitalize="none"
+          autoCorrect={false}
         />
         <Text>My name is {textInputValue}</Text>
       </View>
@@ -38,9 +45,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   input: {
-    borderColor: 'grey',
-    borderWidth: 2,
+    borderColor: 'darkgrey',
+    borderWidth: 3,
     height: 40,
+    padding: 4,
+    fontSize: 15,
   },
 });
 
