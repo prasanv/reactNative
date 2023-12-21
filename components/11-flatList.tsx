@@ -10,7 +10,7 @@ const FlatListView = () => {
       <View>
         <FlatList
           style={styles.scrollView}
-          data={pokemanList}
+          data={pokemanList} // data should be an array if items
           renderItem={(prop: any) => {
             return (
               <View style={[styles.card]} key={prop.index}>
@@ -26,7 +26,7 @@ const FlatListView = () => {
           }}
           ItemSeparatorComponent={(item: any) => {
             console.log(item);
-            return item.leadingItem.id % 2 === 0 ? (
+            return item.leadingItem.id % 3 === 0 ? (
               <View
                 style={{borderWidth: 1, marginVertical: 8, borderColor: 'red'}}
               />

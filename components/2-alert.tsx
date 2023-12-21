@@ -19,17 +19,17 @@ function AlertAPI(): React.JSX.Element {
               onPress: () => console.log('cancel pressed'),
             },
             {
-              text: 'OK',
-              onPress: () => console.log('OK pressed'),
-            },
-            {
               text: 'Update',
               onPress: () => console.log('Update pressed'),
             },
-            // NOTE: Android can only have 3 buttons for alert api, iOS doesn't have a limit on alert buttons
             {
               text: 'Dismiss',
               onPress: () => console.log('Dismiss pressed'),
+            },
+            // NOTE: Android can only have 3 buttons for alert api, iOS doesn't have a limit on alert buttons
+            {
+              text: 'OK',
+              onPress: () => console.log('OK pressed'),
             },
           ])
         }

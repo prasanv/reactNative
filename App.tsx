@@ -11,9 +11,9 @@ import React from 'react';
 // import PlatformSpecificCode from './components/8-platformSpecificCode';
 // @ts-ignore
 // import PlatformSpecificFile from './components/8-platformSpecificFiles/8-platformSpecificFile';
-import PokemanChars from './components/9-pokemanChars';
+// import PokemanChars from './components/9-pokemanChars';
 // import ListScrollView from './components/10-listScrollView';
-// import FlatListView from './components/11-flatList';
+import FlatListView from './components/11-flatList';
 // import SectionListView from './components/12-sectionList';
 
 function App(): React.JSX.Element {
@@ -28,9 +28,9 @@ function App(): React.JSX.Element {
   // return <SafeAreaViewAPI />;
   // return <PlatformSpecificCode />;
   // return <PlatformSpecificFile />;
-  return <PokemanChars />;
+  // return <PokemanChars />;
   // return <ListScrollView />;
-  // return <FlatListView />;
+  return <FlatListView />;
   // return <SectionListView />;
 }
 
