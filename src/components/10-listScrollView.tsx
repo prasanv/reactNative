@@ -6,9 +6,9 @@ const ListScrollView = () => {
   return (
     <SafeAreaView style={[styles.container]}>
       <ScrollView style={[styles.scrollView]}>
-        {pokemanList?.map(item => {
+        {pokemanList?.map((item, index) => {
           return (
-            <View style={[styles.card]}>
+            <View style={[styles.card]} key={index}>
               <Text style={[styles.text]}>{item.type}</Text>
               <Text style={[styles.text]}>{item.name}</Text>
             </View>

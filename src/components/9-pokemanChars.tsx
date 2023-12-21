@@ -137,10 +137,10 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderRadius: 18,
     paddingVertical: 7,
-    paddingHorizontal: 9,
+    paddingHorizontal: 8,
   },
   typeText: {
-    paddingLeft: 8,
+    paddingLeft: 6,
   },
   text: {
     fontSize: 18,
