@@ -28,6 +28,12 @@ const InputTextComp = () => {
         />
         <Text>My name is {textInputValue}</Text>
       </View>
+      <Text style={[styles.label]}>Enter your Comments:</Text>
+      <TextInput
+        style={[styles.multilineInput]}
+        placeholder="message"
+        multiline
+      />
     </SafeAreaView>
   );
 };
@@ -50,6 +56,14 @@ const styles = StyleSheet.create({
     height: 40,
     padding: 4,
     fontSize: 15,
+  },
+  multilineInput: {
+    borderColor: 'darkgrey',
+    borderWidth: 3,
+    height: 100,
+    padding: 4,
+    fontSize: 15,
+    textAlignVertical: 'top',
   },
 });
 
