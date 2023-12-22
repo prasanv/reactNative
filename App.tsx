@@ -16,7 +16,8 @@ import React from 'react';
 // import FlatListView from './src/components/11-flatList';
 // import SectionListView from './src/components/12-sectionList';
 // import InputTextComp from './src/components/13-inputText';
-import SwitchToggle from './src/components/14-switchToggle';
+// import SwitchToggle from './src/components/14-switchToggle';
+import LoginForm from './src/components/15-loginForm';
 
 function App(): React.JSX.Element {
   // return <HelloWorld />;
@@ -35,7 +36,8 @@ function App(): React.JSX.Element {
   //  return <FlatListView />;
   // return <SectionListView />;
   // return <InputTextComp />;
-  return <SwitchToggle />;
+  // return <SwitchToggle />;
+  return <LoginForm />;
 }
 
 export default App;
