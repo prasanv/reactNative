@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-shadow */
+/* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {
   View,
@@ -7,12 +9,34 @@ import {
   Button,
   Image,
   KeyboardAvoidingView,
-  Platform
+  Platform,
 } from 'react-native';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState<any>({});
+
+  const validateForm = () => {
+    let errors: any = {};
+    if (!username) {
+      errors.username = 'Username is required';
+    }
+    if (!password) {
+      errors.password = 'Password is required';
+    }
+    setErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const handleFormSubmit = () => {
+    if (validateForm()) {
+      setErrors({});
+      setUsername('');
+      setPassword('');
+    }
+  };
+  // console.log(errors);
 
   return (
     <KeyboardAvoidingView
@@ -35,6 +59,9 @@ const LoginForm = () => {
           value={username}
           onChangeText={setUsername}
         />
+        {errors?.username ? (
+          <Text style={styles.errorText}>{errors.username}</Text>
+        ) : null}
         <Text style={styles.label}>Password</Text>
         <TextInput
           style={styles.input}
@@ -43,7 +70,14 @@ const LoginForm = () => {
           value={password}
           onChangeText={setPassword}
         />
-        <Button onPress={() => {}} title="Login" color="darkblue" />
+        {errors?.password ? (
+          <Text style={styles.errorText}>{errors.password}</Text>
+        ) : null}
+        <Button
+          onPress={() => handleFormSubmit()}
+          title="Login"
+          color="darkblue"
+        />
       </View>
     </KeyboardAvoidingView>
   );
@@ -89,7 +123,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     color: 'red',
-    marginBottom: 10,
+    marginBottom: 15,
   },
 });
 export default LoginForm;
