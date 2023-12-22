@@ -9,7 +9,6 @@ const FlatListView = () => {
     <SafeAreaView style={[styles.container]}>
       <View>
         <FlatList
-          style={styles.scrollView}
           data={pokemanList} // data should be an array if items
           renderItem={(prop: any) => {
             return (
