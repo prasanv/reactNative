@@ -26,17 +26,21 @@ const LoginForm = () => {
       errors.password = 'Password is required';
     }
     setErrors(errors);
+
+    if (Object.keys(errors).length !== 0) {
+      console.log(errors);
+    }
     return Object.keys(errors).length === 0;
   };
 
   const handleFormSubmit = () => {
     if (validateForm()) {
+      console.log('Submitting', {username}, {password});
       setErrors({});
       setUsername('');
       setPassword('');
     }
   };
-  // console.log(errors);
 
   return (
     <KeyboardAvoidingView

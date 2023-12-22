@@ -17,7 +17,8 @@ import React from 'react';
 // import SectionListView from './src/components/12-sectionList';
 // import InputTextComp from './src/components/13-inputText';
 // import SwitchToggle from './src/components/14-switchToggle';
-import LoginForm from './src/components/15-loginForm';
+// import LoginForm from './src/components/15-loginForm';
+import PullOnRequest from './src/components/16-pullOnRequest';
 
 function App(): React.JSX.Element {
   // return <HelloWorld />;
@@ -37,7 +38,8 @@ function App(): React.JSX.Element {
   // return <SectionListView />;
   // return <InputTextComp />;
   // return <SwitchToggle />;
-  return <LoginForm />;
+  // return <LoginForm />;
+  return <PullOnRequest />;
 }
 
 export default App;
