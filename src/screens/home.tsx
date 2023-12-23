@@ -35,11 +35,9 @@ const Home = ({navigation}: any) => {
 const styles = StyleSheet.create({
   safeAreaViewContainer: {
     flex: 1,
-    backgroundColor: 'lightgreen',
   },
   container: {
     flex: 1,
-    backgroundColor: 'orange',
   },
   headerText: {
     fontSize: 36,
