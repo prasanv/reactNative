@@ -5,7 +5,7 @@ const About = (prop: any) => {
   return (
     <SafeAreaView style={[styles.safeAreaViewContainer]}>
       <View style={[styles.container]}>
-        <Text style={styles.headerText}>About</Text>
+        <Text style={styles.headerText}>About Screen Content</Text>
         <Text style={styles.text}>
           Parameter passed by Home screen: {prop.route.params.name}
         </Text>

@@ -1,9 +1,9 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import Home from './src/components/home';
+import Home from './src/screens/home';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import About from './src/components/about';
-import Contact from './src/components/contact';
+import About from './src/screens/about';
+import Contact from './src/screens/contact';
 
 // import HelloWorld from './src/components/1-helloWorld';
 // import Alert from './src/components/2-alert';

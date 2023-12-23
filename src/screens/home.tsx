@@ -13,7 +13,7 @@ const Home = ({navigation}: any) => {
   return (
     <SafeAreaView style={[styles.safeAreaViewContainer]}>
       <View style={[styles.container]}>
-        <Text style={styles.text}>Home</Text>
+        <Text style={styles.headerText}>Home Screen Content</Text>
         <Button
           title="About"
           onPress={() => navigation.navigate('About', {name: 'PrasanV'})}
@@ -41,11 +41,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'orange',
   },
-  text: {
-    fontSize: 50,
-    color: 'black',
-    fontWeight: '400',
+  headerText: {
+    fontSize: 36,
     textAlign: 'center',
+  },
+  text: {
+    fontSize: 18,
+    padding: 5,
   },
 });
 

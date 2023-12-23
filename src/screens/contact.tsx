@@ -6,7 +6,7 @@ const Contact = ({route, navigation}: any) => {
   return (
     <SafeAreaView style={[styles.safeAreaViewContainer]}>
       <View style={[styles.container]}>
-        <Text style={styles.headerText}>Contact Screen</Text>
+        <Text style={styles.headerText}>Contact Screen Content</Text>
         <Text style={styles.text}>
           Parameter passed by Home screen: {location}
         </Text>
