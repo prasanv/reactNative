@@ -1,6 +1,14 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState} from 'react';
-import {Text, View, StyleSheet, Image, FlatList, Platform, SafeAreaView} from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  FlatList,
+  Platform,
+  SafeAreaView,
+} from 'react-native';
 const axios = require('axios').default;
 
 const PullOnRequest = () => {
