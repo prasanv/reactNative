@@ -1,11 +1,6 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import Home from './src/screens/home';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import About from './src/screens/about';
-import Contact from './src/screens/contact';
-import {Pressable, Text} from 'react-native';
+import StackNavigation from './src/Navigation/stackNavigation';
 
 // import HelloWorld from './src/components/1-helloWorld';
 // import Alert from './src/components/2-alert';
@@ -27,8 +22,6 @@ import {Pressable, Text} from 'react-native';
 // import SwitchToggle from './src/components/14-switchToggle';
 // import LoginForm from './src/components/15-loginForm';
 // import PullOnRequest from './src/components/16-pullOnRequest';
-
-const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
   // return <HelloWorld />;
@@ -52,45 +45,7 @@ function App(): React.JSX.Element {
   // return <PullOnRequest />;
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Home"
-        screenOptions={{
-          headerStyle: {backgroundColor: '#6a51ae'},
-          headerTintColor: 'white',
-          headerTitleStyle: {fontWeight: 'bold'},
-          // eslint-disable-next-line react/no-unstable-nested-components
-          headerRight: () => (
-            <Pressable
-              onPress={() => {
-                // eslint-disable-next-line no-alert
-                return alert('Menu button is pressed');
-              }}>
-              <Text style={{color: 'white', fontSize: 16}}>Menu</Text>
-            </Pressable>
-          ),
-          contentStyle: {backgroundColor: '#e8e4f3'},
-        }}>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{
-            title: 'My home', // Setting the header title
-          }}
-        />
-        <Stack.Screen
-          name="About"
-          component={About}
-          options={({route}) => ({title: `About ${route?.params?.name}`})}
-        />
-        <Stack.Screen
-          name="Contact"
-          component={Contact}
-          initialParams={{
-            country: 'Canada',
-            province: 'BC',
-          }}
-        />
-      </Stack.Navigator>
+      <StackNavigation />
     </NavigationContainer>
   );
 }
