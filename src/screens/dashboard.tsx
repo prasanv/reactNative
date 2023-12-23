@@ -1,10 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, View} from 'react-native';
 
-const Dashboard = () => {
+const Dashboard = ({navigation}: any) => {
+  console.log(navigation);
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Dashboard</Text>
+      <Button title="Toggle Drawer" onPress={() => navigation.toggleDrawer()} />
+      <Button title="Settings" onPress={() => navigation.jumpTo('Settings')} />
     </View>
   );
 };
