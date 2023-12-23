@@ -1,4 +1,10 @@
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import Home from './src/components/home';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import About from './src/components/about';
+import Contact from './src/components/contact';
+
 // import HelloWorld from './src/components/1-helloWorld';
 // import Alert from './src/components/2-alert';
 // import Styling from './src/components/3-styling';
@@ -18,7 +24,9 @@ import React from 'react';
 // import InputTextComp from './src/components/13-inputText';
 // import SwitchToggle from './src/components/14-switchToggle';
 // import LoginForm from './src/components/15-loginForm';
-import PullOnRequest from './src/components/16-pullOnRequest';
+// import PullOnRequest from './src/components/16-pullOnRequest';
+
+const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
   // return <HelloWorld />;
@@ -39,7 +47,22 @@ function App(): React.JSX.Element {
   // return <InputTextComp />;
   // return <SwitchToggle />;
   // return <LoginForm />;
-  return <PullOnRequest />;
+  // return <PullOnRequest />;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="About" component={About} />
+        <Stack.Screen
+          name="Contact"
+          component={Contact}
+          initialParams={{
+            country: 'canada',
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
 export default App;
