@@ -8,8 +8,33 @@ const Drawer = createDrawerNavigator();
 
 const drawerNavigation = () => {
   return (
-    <Drawer.Navigator>
-      <Drawer.Screen name="Dashboard" component={Dashboard} />
+    <Drawer.Navigator
+      initialRouteName="Settings"
+      backBehavior="none"
+      screenOptions={{
+        drawerStyle: {
+          width: 250,
+        },
+        drawerPosition: 'right',
+        drawerStatusBarAnimation: 'fade',
+        // drawerType: 'permanent',
+        drawerActiveTintColor: 'white',
+        drawerActiveBackgroundColor: 'grey',
+        drawerContentContainerStyle: {
+          backgroundColor: 'white',
+        },
+        drawerContentStyle: {
+          backgroundColor: 'lightgrey',
+        },
+      }}>
+      <Drawer.Screen
+        name="Dashboard"
+        component={Dashboard}
+        options={{
+          title: 'My Dashboard',
+          drawerLabel: 'Dashboard Label',
+        }}
+      />
       <Drawer.Screen name="Settings" component={Settings} />
     </Drawer.Navigator>
   );
