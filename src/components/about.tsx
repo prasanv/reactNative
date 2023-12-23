@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView, Button} from 'react-native';
 
 const About = (prop: any) => {
   return (
@@ -9,6 +9,14 @@ const About = (prop: any) => {
         <Text style={styles.text}>
           Parameter passed by Home screen: {prop.route.params.name}
         </Text>
+        <Button
+          title="Navigate to Contact Screen"
+          onPress={() => {
+            prop.navigation.navigate('Contact', {
+              info: 'About PrasanV Contact Info',
+            });
+          }}
+        />
       </View>
     </SafeAreaView>
   );

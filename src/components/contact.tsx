@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, SafeAreaView, Button} from 'react-native';
 
 const Contact = ({route, navigation}: any) => {
-  const {location, country, province} = route.params;
+  const {location, country, province, info} = route.params;
   return (
     <SafeAreaView style={[styles.safeAreaViewContainer]}>
       <View style={[styles.container]}>
@@ -17,6 +17,12 @@ const Contact = ({route, navigation}: any) => {
           title="Update Province"
           onPress={() => navigation.setParams({province: 'British Columbia'})}
         />
+        {info && (
+          <Text style={styles.text}>
+            This info will be populated only if you navigate for the About
+            screen. Here is parameter passed by About screen: {info}
+          </Text>
+        )}
       </View>
     </SafeAreaView>
   );
