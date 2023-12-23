@@ -5,7 +5,7 @@ const About = (prop: any) => {
   return (
     <SafeAreaView style={[styles.safeAreaViewContainer]}>
       <View style={[styles.container]}>
-        <Text style={styles.text}>About</Text>
+        <Text style={styles.headerText}>About</Text>
         <Text style={styles.text}>
           Parameter passed by Home screen: {prop.route.params.name}
         </Text>
@@ -23,10 +23,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'orange',
   },
+  headerText: {
+    fontSize: 36,
+    textAlign: 'center',
+  },
   text: {
     fontSize: 18,
-    color: 'black',
-    textAlign: 'center',
+    padding: 5,
   },
 });
 

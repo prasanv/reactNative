@@ -16,14 +16,14 @@ const Home = ({navigation}: any) => {
         <Text style={styles.text}>Home</Text>
         <Button
           title="About"
-          onPress={() => navigation.navigate('About', {name: 'prasanv'})}
+          onPress={() => navigation.navigate('About', {name: 'PrasanV'})}
         />
         <Button
           title="Contact"
           onPress={() =>
             navigation_2.navigate(
               screenName as never,
-              {location: 'vancouver'} as never,
+              {location: 'Vancouver'} as never,
             )
           }
         />

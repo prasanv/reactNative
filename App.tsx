@@ -57,7 +57,8 @@ function App(): React.JSX.Element {
           name="Contact"
           component={Contact}
           initialParams={{
-            country: 'canada',
+            country: 'Canada',
+            province: 'BC',
           }}
         />
       </Stack.Navigator>
