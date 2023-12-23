@@ -1,8 +1,22 @@
-import React from 'react';
+import React, {useLayoutEffect} from 'react';
 import {View, Text, StyleSheet, SafeAreaView, Button} from 'react-native';
 
 const Contact = ({route, navigation}: any) => {
-  const {location, country, province, info} = route.params;
+  const {location, country, province, info, name} = route.params;
+
+  // NOTE: useLayoutEffect is a version of useEffect that fires before the browser repaints the screen.
+  useLayoutEffect(() => {
+    if (name) {
+      navigation.setOptions({
+        title: `${name} Contact`,
+      });
+    } else {
+      navigation.setOptions({
+        title: 'My Contact',
+      });
+    }
+  }, [navigation, name]);
+
   return (
     <SafeAreaView style={[styles.safeAreaViewContainer]}>
       <View style={[styles.container]}>

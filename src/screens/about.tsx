@@ -14,6 +14,7 @@ const About = (prop: any) => {
           onPress={() => {
             prop.navigation.navigate('Contact', {
               info: 'About PrasanV Contact Info',
+              name: prop.route.params.name,
             });
           }}
         />

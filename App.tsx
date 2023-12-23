@@ -77,7 +77,11 @@ function App(): React.JSX.Element {
             title: 'My home', // Setting the header title
           }}
         />
-        <Stack.Screen name="About" component={About} />
+        <Stack.Screen
+          name="About"
+          component={About}
+          options={({route}) => ({title: `About ${route?.params?.name}`})}
+        />
         <Stack.Screen
           name="Contact"
           component={Contact}
