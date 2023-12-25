@@ -1,9 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import Home from '../screens/home';
+import Home from '../screens/stackNavigation/home';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import About from '../screens/about';
-import Contact from '../screens/contact';
+import About from '../screens/stackNavigation/about';
+import Contact from '../screens/stackNavigation/contact';
 import {Pressable, Text} from 'react-native';
 
 const Stack = createNativeStackNavigator();
@@ -35,6 +35,7 @@ const StackNavigation = ({navigation}: any) => {
       <Stack.Screen
         name="About"
         component={About}
+        // @ts-ignore
         options={({route}) => ({title: `About ${route?.params?.name}`})}
       />
       <Stack.Screen

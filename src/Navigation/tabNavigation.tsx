@@ -1,7 +1,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Main from '../screens/Main';
-import Settings from '../screens/settings';
+import Main from '../screens/tabNavigation/Main';
+import Settings from '../screens/tabNavigation/settings';
 import StackNavigation from './stackNavigation';
 import {Pressable, Text} from 'react-native';
 // import Ionicons from '@expo/vector-icons/Ionicons';
@@ -49,7 +49,13 @@ const TabNavigation = ({navigation}: any) => {
           headerShown: false,
         }}
       />
-      <Tab.Screen name="Settings" component={Settings} />
+      <Tab.Screen
+        name="Settings"
+        component={Settings}
+        options={{
+          title: 'Profile Settings',
+        }}
+      />
     </Tab.Navigator>
   );
 };

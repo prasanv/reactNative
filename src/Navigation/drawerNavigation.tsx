@@ -1,7 +1,7 @@
 import React from 'react';
 import 'react-native-gesture-handler';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import Dashboard from '../screens/dashboard';
+import Dashboard from '../screens/drawerNavigation/dashboard';
 import TabNavigation from './tabNavigation';
 
 const Drawer = createDrawerNavigator();
