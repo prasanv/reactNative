@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import pokemanChars from '../data/pokemanDetails.json';
 
-const pokemanCharacters = () => {
+const PokemanCharacters = () => {
   return (
     <SafeAreaView style={[styles.container]}>
       <ScrollView style={[styles.scrollView]}>
@@ -153,4 +153,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default pokemanCharacters;
+export default PokemanCharacters;
