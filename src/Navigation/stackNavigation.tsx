@@ -8,7 +8,7 @@ import {Alert, Pressable, Text} from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
-const StackNavigation = () => {
+const StackNavigation = ({navigation}: any) => {
   return (
     <Stack.Navigator
       initialRouteName="Home"
@@ -19,10 +19,7 @@ const StackNavigation = () => {
 
         // eslint-disable-next-line react/no-unstable-nested-components
         headerRight: () => (
-          <Pressable
-            onPress={() => {
-              return Alert.alert('Menu', 'Header right menu button is pressed');
-            }}>
+          <Pressable onPress={() => navigation.toggleDrawer()}>
             <Text style={{color: 'white', fontSize: 16}}>Menu</Text>
           </Pressable>
         ),

@@ -2,12 +2,14 @@ import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 
 const Dashboard = ({navigation}: any) => {
-  console.log(navigation);
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Dashboard</Text>
       <Button title="Toggle Drawer" onPress={() => navigation.toggleDrawer()} />
-      {/* <Button title="Settings" onPress={() => navigation.jumpTo('Settings')} /> */}
+      <Button
+        title="Jump to Tab Navigator"
+        onPress={() => navigation.jumpTo('TabNavigator')}
+      />
     </View>
   );
 };

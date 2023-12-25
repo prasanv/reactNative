@@ -1,7 +1,8 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-const Main = () => {
+const Main = ({navigation}: any) => {
+  console.log('navigation', navigation);
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Main</Text>
