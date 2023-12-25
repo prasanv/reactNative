@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Main from '../screens/Main';
 import Settings from '../screens/settings';
 import Articles from '../screens/articles';
+import StackNavigation from './stackNavigation';
 // import Ionicons from '@expo/vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
@@ -10,6 +11,7 @@ const Tab = createBottomTabNavigator();
 const TabNavigation = () => {
   return (
     <Tab.Navigator
+      initialRouteName="main"
       screenOptions={{
         tabBarShowLabel: true,
         tabBarStyle: {position: 'absolute'},
@@ -23,6 +25,13 @@ const TabNavigation = () => {
         tabBarLabelPosition: 'beside-icon',
         tabBarBadgeStyle: {backgroundColor: 'lightblue'},
       }}>
+      <Tab.Screen
+        name="Stack"
+        component={StackNavigation}
+        options={{
+          headerShown: false,
+        }}
+      />
       <Tab.Screen
         name="Main"
         component={Main}
