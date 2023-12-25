@@ -2,7 +2,6 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Main from '../screens/Main';
 import Settings from '../screens/settings';
-import Articles from '../screens/articles';
 import StackNavigation from './stackNavigation';
 // import Ionicons from '@expo/vector-icons/Ionicons';
 
@@ -36,14 +35,12 @@ const TabNavigation = () => {
         name="Main"
         component={Main}
         options={{
-          title: 'Home',
           tabBarBadge: 4,
           //   tabBarIcon: ({color}) => (
           //     <Ionicons name="home" size={32} color={color} />
           //   ),
         }}
       />
-      <Tab.Screen name="Articles" component={Articles} />
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
   );

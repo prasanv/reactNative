@@ -2,14 +2,14 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Dashboard from '../screens/dashboard';
-import Settings from '../screens/settings';
+import TabNavigation from './tabNavigation';
 
 const Drawer = createDrawerNavigator();
 
 const drawerNavigation = () => {
   return (
     <Drawer.Navigator
-      initialRouteName="Settings"
+      initialRouteName="Dashboard"
       backBehavior="none"
       screenOptions={{
         drawerStyle: {
@@ -31,11 +31,17 @@ const drawerNavigation = () => {
         name="Dashboard"
         component={Dashboard}
         options={{
-          title: 'My Dashboard',
-          drawerLabel: 'Dashboard Label',
+          title: "Prasan's Dashboard",
+          drawerLabel: 'My Dashboard',
         }}
       />
-      <Drawer.Screen name="Settings" component={Settings} />
+      <Drawer.Screen
+        name="TabNavigator"
+        component={TabNavigation}
+        options={{
+          headerShown: false,
+        }}
+      />
     </Drawer.Navigator>
   );
 };

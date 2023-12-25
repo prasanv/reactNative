@@ -2,8 +2,8 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 
 // import StackNavigation from './src/Navigation/stackNavigation';
-// import DrawerNavigation from './src/Navigation/drawerNavigation';
-import TabNavigation from './src/Navigation/tabNavigation';
+import DrawerNavigation from './src/Navigation/drawerNavigation';
+// import TabNavigation from './src/Navigation/tabNavigation';
 
 // import HelloWorld from './src/components/1-helloWorld';
 // import Alert from './src/components/2-alert';
@@ -49,8 +49,8 @@ function App(): React.JSX.Element {
   return (
     <NavigationContainer>
       {/* <StackNavigation /> */}
-      {/* <DrawerNavigation /> */}
-      <TabNavigation />
+      <DrawerNavigation />
+      {/* <TabNavigation /> */}
     </NavigationContainer>
   );
 }
