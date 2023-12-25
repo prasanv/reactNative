@@ -7,7 +7,7 @@ const Dashboard = ({navigation}: any) => {
       <Text style={styles.text}>Dashboard</Text>
       <Button title="Toggle Drawer" onPress={() => navigation.toggleDrawer()} />
       <Button
-        title="Jump to Tab Navigator"
+        title="Jump to Tab Navigator screen"
         onPress={() => navigation.jumpTo('TabNavigator')}
       />
     </View>

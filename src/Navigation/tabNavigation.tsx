@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Main from '../screens/Main';
 import Settings from '../screens/settings';
 import StackNavigation from './stackNavigation';
-import {Alert, Pressable, Text} from 'react-native';
+import {Pressable, Text} from 'react-native';
 // import Ionicons from '@expo/vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();

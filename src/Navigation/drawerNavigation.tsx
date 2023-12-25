@@ -40,6 +40,7 @@ const drawerNavigation = () => {
         component={TabNavigation}
         options={{
           headerShown: false,
+          drawerLabel: 'Main',
         }}
       />
     </Drawer.Navigator>

@@ -4,7 +4,7 @@ import Home from '../screens/home';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import About from '../screens/about';
 import Contact from '../screens/contact';
-import {Alert, Pressable, Text} from 'react-native';
+import {Pressable, Text} from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,7 +29,7 @@ const StackNavigation = ({navigation}: any) => {
         name="Home"
         component={Home}
         options={{
-          title: 'My home', // Setting the header title
+          title: 'Stack home', // Setting the header title
         }}
       />
       <Stack.Screen
