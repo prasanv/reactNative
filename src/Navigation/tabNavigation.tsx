@@ -1,10 +1,9 @@
-/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Main from '../screens/Main';
 import Settings from '../screens/settings';
 import Articles from '../screens/articles';
-import Ionicons from '@expo/vector-icons/Ionicons';
+// import Ionicons from '@expo/vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,9 +29,9 @@ const TabNavigation = () => {
         options={{
           title: 'Home',
           tabBarBadge: 4,
-          tabBarIcon: ({color}) => (
-            <Ionicons name="home" size={32} color={color} />
-          ),
+          //   tabBarIcon: ({color}) => (
+          //     <Ionicons name="home" size={32} color={color} />
+          //   ),
         }}
       />
       <Tab.Screen name="Articles" component={Articles} />
