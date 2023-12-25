@@ -1,52 +1,33 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {
-  ActivityIndicator,
   Button,
   Image,
   Modal,
   Pressable,
-  StatusBar,
   StyleSheet,
-  Switch,
   Text,
   View,
+  ScrollView,
 } from 'react-native';
 import scenery from '../assets/scenery.jpg';
 
 function HelloWorld(): React.JSX.Element {
   const [modalVisibility, setModalVisibility] = useState(false);
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   return (
-    <View style={styles.container}>
-      <StatusBar
-        backgroundColor="lightgreen"
-        barStyle="dark-content"
-        hidden={isEnabled}
-        //networkActivityIndicatorVisible={true} // iso only
-      />
-      <ActivityIndicator size="large" color="violet" animating={isEnabled} />
-      <Text>
-        Use the below toggle switch to hide/show Status Bar and Activity
-        Indicator
-      </Text>
-      <Switch
-        trackColor={{false: '#767577', true: '#81b0ff'}}
-        thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
-        value={isEnabled}
-      />
+    <ScrollView style={styles.container}>
       <Image resizeMode="center" source={require('../assets/scenery.jpg')} />
+      <Image
+        style={{width: 150, height: 200}}
+        source={{uri: 'https://picsum.photos/200/300'}}
+      />
       <Pressable
         onPress={() => {
           console.log('Image is pressed');
         }}>
         <Image source={scenery} />
       </Pressable>
-      {/* <Image source={{uri: 'https://picsum.photos/200/300'}} /> */}
       <Button
         title="Press me"
         onPress={() => {
@@ -92,13 +73,13 @@ function HelloWorld(): React.JSX.Element {
           culpa qui officia deserunt mollit anim id est laborum.
         </Text>
       </Pressable>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 30,
+    paddingHorizontal: 30,
     flex: 1,
   },
 });
