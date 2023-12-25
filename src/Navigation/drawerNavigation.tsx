@@ -82,7 +82,7 @@ const drawerNavigation = () => {
       <Drawer.Screen name="InputText Example" component={InputTextComp} />
       <Drawer.Screen name="Switch Toggle" component={SwitchToggle} />
       <Drawer.Screen name="Login Form" component={LoginForm} />
-      <Drawer.Screen name="PullOnRequest" component={PullOnRequest} />
+      <Drawer.Screen name="Refresh Flat list Items" component={PullOnRequest} />
     </Drawer.Navigator>
   );
 };
